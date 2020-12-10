@@ -70,12 +70,12 @@ h6 {
     font-family: var(--font-family-title);
     margin-top : 0;
     font-weight: 700;
+    line-height: 1;
 }
 
 
 h1 {
     font-size    : var(--h1-font-size);
-    line-height  : 98px;
     margin-bottom: 1rem;
 }
 
@@ -117,7 +117,13 @@ p {
     margin-right: auto;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+}
+
 .col-2 {
+    width    : 50%;
     max-width: 50%;
 }
 
@@ -152,6 +158,10 @@ p {
 .barra-img{
     padding-bottom: 32px;
     padding-top   : 16px;
+}
+
+::marker {
+    color: #3e87c7;
 }
 
 /* Menu */
@@ -202,14 +212,17 @@ p {
     display        : flex;
     align-items    : center;
     justify-content: center;
+    padding        : 8px;
 }
 
-.tira-item-txt {
-    padding-left: 12px;
-}
 
 .div-txt {
     padding-right: 32px;
+}
+
+.tira-detalles-section p{
+    padding     : 0;
+    padding-left: 12px;
 }
 
 /* Equipos */
@@ -228,7 +241,7 @@ p {
 
 
 /* Equipos */
-.equipos-section{
+.equipos-section, .incluyen-section{
     background-image: url("../images/dot.png");
 }
 .contenido-equipos {
@@ -237,7 +250,7 @@ p {
     justify-content: space-around;
 }
 
-.equipos-section .barra-img, .staff-section .barra-img {
+.equipos-section .barra-img, .staff-section .barra-img, .recomendaciones-section .barra-img {
     margin : auto;
     display: block;
 }
@@ -265,4 +278,21 @@ p {
 .staff-contenido ul{
     padding-left : 40px;
     margin-bottom: 1rem;
+}
+
+/* Curso de Psicoprofilaxis */
+.barra-section {
+    background-image: url("../images/fondo-tira.jpg");
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.psico-img {
+    width: 90%;
+    
+    margin-top: -140px;
+}
+
+.barra-section h3, .barra-section .subtitle {
+    color: #fff;
 }
