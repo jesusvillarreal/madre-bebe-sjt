@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link  rel="icon"   href="/images/icons/sjt.png" type="image/png" />
+    <link  rel="icon"   href="/images/icons/favicon-sjt.png" type="image/png" />
 
     
     <!-- Normalize -->
     <link rel="stylesheet" href="/styles/normalize.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+
     <!-- Personales -->
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/form.css">
     <link rel="stylesheet" href="/styles/botones.css">
+
+    <!-- OWL Carrousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+
 
 
     <title>Madre Bebé - Clinica San Judas Tadeo</title>
@@ -28,7 +37,7 @@
                 <a href="#">
                     <img src="/images/Logo-a-colores-SJT.png" alt="Logo San Judas Tadeo"  class="cabecera-item">
                 </a>
-                <button class="cabecera-item button">MÁS INFORMACIÓN</button>
+                <button class="cabecera-item button" id="open-modal">Solicitar Información</button>
             </div>
 
         </nav>
@@ -36,12 +45,128 @@
     </header>
 
     <main>
+        <!-- Modal de formulario -->
+        <div class="modal" id="modal">
+            <div class="content">
+                <div class="container-form " >
+                    <label for="show" class="close-btn fas fa-times" id="close-modal" ></label>
+                    
+                    <!-- Formuarlio -->
+                    <h4>Solicitar información</h4>
+                    <p class="subtitulo-formulario">Planifica la llegada de tu bebé a través de cómodos pagos hasta el momento de dar a luz.</p>
+                    <form action="#">
+                        <div class="data">
+                            <label class="modal-label" for="">Nombres y apellidos</label>
+                            <input 
+                            class="input-formulario" 
+                            placeholder="Ingresa nombres y apellidos"
+                            type="text" 
+                            value="" 
+                            required>
+                        </div>
+                     
+                        <div class="data">
+                            <label class="modal-label" for="">Meses de Gestación</label>
+                            <input 
+                            class="input-formulario" 
+                            placeholder="Ingrese su mes de gestación"
+                            type
+                            ="text" v
+                            alue="" >
+                        </div>
+                        <div class="data">
+                            <label class="modal-label" for="">Celular o WhatsApp</label>
+                            <input 
+                            class="input-formulario" 
+                            placeholder="Ingresa su número de celular"
+                            type="text" 
+                            value="" 
+                            required>
+                        </div>
+                   
+                        <div class="data">
+                            <label class="modal-label" for="">Correo</label>
+                            <input 
+                            class="input-formulario" 
+                            placeholder="Ingresa tu correo electronico"
+                            type="text" 
+                            value="" 
+                            required>
+                        </div>
+                        <!-- <div class="terms">
+                            <input type="checkbox" name="terms" onclick="disableSending()">
+                            <label for="terms">Acepto recibir información de promociones.</label>
+                        </div> -->
+                        <button type="submit" class="formulario-submit button dark" >Enviar datos</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-        <section class="slider-section">
+
+        <section class="slider slider-sectionn">
+            
+            <div class="conter"> 
+                    <div class="loop owl-carousel owl-theme">
+                       
+
+                        
+                        <div class="item flex slide-1">
+
+                            <div class="container flex">
+                                <div class="col-2">
+                                    <img src="/images/img/slider/madre-bebe-slider1.png" alt="" class="img">
+                                    
+                                </div>
+                                <div class="col-2">
+                                    <h1>Programa <br>Madre-Bebé</h1>
+                                    <p class="txt-slider">La Clínica San Judas Tadeo te ofrece el programa Madre/Bebé que le dará la mejor bienvenida a tu futuro bebé con las máximas condiciones de atención médica y de ambiente confortable.</p>
+                                </div>         
+                            </div>   
+                        </div>
+
+                        <div class="item flex slide-2">
+
+                            <div class="container flex ">
+                                <div class="col-2">
+                                    <img src="/images/staff.png" alt="" class="img">
+                                    
+                                </div>
+                                <div class="col-2">
+                                    <h2>Staff e Infraestructura de Primer Nivel</h2>
+                                    <p class="txt-slider">Todos los servicios ofrecidos en nuestros locales cuentan con una amplia, cómoda infraestructura y tecnología avanzada. 
+                                        <br>
+                                    A su vez contamos con un Staff médico calificado, que brindan una atención médica personalizada. </p>
+                                </div>         
+                            </div>   
+                        </div>
+                        <div class="item flex slide-3">
+
+                            <div class="container flex ">
+                                <div class="col-2">
+                                    <h2>Psicoprofilaxis<br> Obstétrica</h2>
+                                    <p class="txt-slider">Como obsequio te invitamos a aprender y experimentar las técnicas de relajación y ejercicios físicos, que favorecerán las funciones de tu cuerpo para el nacimiento de tu bebé.</p>
+                                </div>         
+                                <div class="col-2">
+                                    <img src="/images/img/slider/Psicoprofilaxis11.png" alt="" class="img">
+                                    
+                                </div>
+                            </div>   
+                        </div>
+             
+                  
+
+                         
+                      
+                    </div>
+            </div> 
+        </section>
+
+        <!-- <section class="slider-section">
             <div class="slider">
                 <img src="/images/Fondo-Slider.jpg" alt="" class="img-slider">
             </div>
-        </section>
+        </section> -->
 
         <section class="tira-detalles-section container">
             <!-- 1 -->
@@ -140,7 +265,20 @@
                 </div>
                 <!-- Carrousel -->
                 <div class="col-2">
-                    <img src="/images/slider-equipos/1.png" alt="">
+                    <div class="instalaciones owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="/images/slider-equipos/1.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="/images/slider-equipos/2.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="/images/slider-equipos/3.png" alt="">
+                        </div>
+                        
+                        
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -179,7 +317,418 @@
             <p class="subtitle">Pensando en tu tranquilidad hemos diseñado cada uno de nuestros planes incluyendo todo lo necesario para el evento más importante de tu vida, la llegada del bebe. Para ello tenemos dos opciones de acuerdo a la evolución de tu embarazo. Tenemos Parto natural y parto por cesárea.</p>
 
             <!-- Pestañas de partos -->
+            <div class="container pestañas-partos">
+                <div class="wrap">
+                    <ul class="tabs">
+                        <li><a href="#tab-1">PARTO NORMAL</a></li>
+                        <li><a href="#tab-2">PARTO CESÁREA</a></li>
+                    </ul>
 
+                    <div class="secciones">
+                        <article id="tab-1">
+                            <div class="grid">
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/carrito.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Habitación personal
+                                    </p>
+                                    <p>Nuestras habitaciones son de tipo Superior, con espacios amplios e iluminación natural lo que permite a la mamá y sus familiares un espacio tranquilo y confortable para compartir al nuevo bebe.</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/globo.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">               
+                                        Acceso del Padre al Parto Programado
+                                    </p>
+                                    <p>Se parte de la bienvenida del nuevo miembro de su familia. (durante la emergencia sanitaria, esta restringido el acceso).</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/pills.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Medicinas y materiales
+                                    </p>
+                                    <p>Que necesitan para la labor de parto (exceptuando complicaciones / antibióticos).</p>
+                                </div>
+                              </div>
+                      
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/hands.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Sala de Parto
+                                    </p>
+                                    <p>Nuestras salas de partos se encuentran totalmente equipadas para el nacimiento del nuevo integrante.</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal//baby.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Atención de Especialistas
+                                    </p>
+                                    <p>El recién nacido contará con atención de especialistas en neonatología las 24 horas del día.</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/papilla.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Atención Permanente
+                                    </p>
+                                    <p>Usted recibirá una atención permanente del Obstetra.</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/sonaja.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Presencia del Pediatra
+                                    </p>
+                                    <p>Supervisara todo el proceso del en la sala de partos.</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/calendario.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Honorarios profesionales
+                                    </p>
+                                    <p>Médico gineco-obstetra y médico pediatra.</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/jeringa.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Laboratorio Prenatal
+                                    </p>
+                                    <p>Grupo sanguíneo y RH</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/abc.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Atención pediatra
+                                    </p>
+                                    <p>En el área de Hospitalización</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/baby.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">     
+                                        Monitoreo materno fetal
+                                    </p>
+                                    <p>Para el montoreo constante del bebé</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/paltos.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Alimentación
+                                    </p>
+                                    <p>Según indicación médica.</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/shampoo.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Kit de aseo
+                                    </p>
+                                    <p>Grupo sanguíneo y RH</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/adornos.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Sala de bebes
+                                    </p>
+                                    <p>Con el cuidado 24/7</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid centrar">
+                                <img src="/images/icons/elementos-iconos/normal/jeringa.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Vacuna BCG
+                                    </p>
+                                    <p>Es una vacuna contra la enfermedad de tuberculosis   </p>
+                                </div>
+                              </div>
+
+                              
+                              
+                </div>
+
+
+
+                        <div class="precio-parto">
+                            <h5 class="center">El Programa Madre - Bebé</h5>
+                            <p class="center">Parto Normal</p>
+                            <img src="/images/icons/barra.png" alt="" class="barra-img" width="40%">
+                            <img src="/images/icons/elementos-iconos/precio-parto-normal.png" alt="">
+                        </div>
+                            
+                        </article>
+                    </div>
+
+                    <div class="secciones">
+                        <article id="tab-2">
+                            <div class="grid">
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/carrito.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Habitación personal y alimentación (2 días)
+                                    </p>
+                                    <p>Nuestras habitaciones son de tipo Superior, con espacios amplios e iluminación natural lo que permite a la mamá y sus familiares un espacio tranquilo y confortable para compartir al nuevo bebe.</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/jeringa.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">               
+                                        Laboratorio Preoperatorio
+                                    </p>
+                                    <p>Glucosa, grupo sanguíneo y RH, hemograma completo, HIV Elisa, examen completo de orina, coagulación y sangría, urea (en sangre), VDRL y riesgo cardiológico.</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/pills.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Medicinas y materiales
+                                    </p>
+                                    <p>Que necesitan para la labor de parto (exceptuando complicaciones / antibióticos).</p>
+                                </div>
+                              </div>
+                      
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/hands.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Atención de Especialistas
+                                    </p>
+                                    <p>El recién nacido contará con atención de especialistas en neonatología las 24 horas del día, por dos días.</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/talco.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Cuidados de Enfermería
+                                    </p>
+                                    <p>Especializadas en obstetricia, las 24 horas, por dos días.</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/calendario.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Honorarios profesionales
+                                    </p>
+                                    <p>Médico gineco-obstetra y médico pediatra.</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/baby.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Incubadora
+                                    </p>
+                                    <p>Para el recién nacido, por dos horas.</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/calendario.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Atención pediatra
+                                    </p>
+                                    <p>En el área de Hospitalización.</p>
+                                </div>
+                              </div>
+                             
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/abc.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Primera consulta de control
+                                    </p>
+                                    <p>Control de niño sano, se realiza  a los 15 días de vida</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/jeringa.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">     
+                                        Laboratorio
+                                    </p>
+                                    <p>Exámenes de grupo sanguíneo y RH</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/paltos.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Sala de bebes
+                                    </p>
+                                    <p>Con el cuidado 24/7</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/shampoo.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Incluye anestesia epidural
+                                    </p>
+                                    <p>Aplicada por un Anestesiólogo Especialista</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/adornos.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Sala de recuperación
+                                    </p>
+                                    <p>Lugar cómodo para una recuperación rápida (hasta por dos horas)</p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/jeringa.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Vacuna BCG
+                                    </p>
+                                    <p>Es una vacuna contra la enfermedad de tuberculosis   </p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/hands.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Presencia del Pediatra
+                                    </p>
+                                    <p>Neonato en la Sala de Operaciones </p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/jeringa.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Sala de operaciones
+                                    </p>
+                                    <p>Con todos los equipos especializados </p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/paltos.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Alimentación
+                                    </p>
+                                    <p>Para la madre, según indicación médica  </p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/jeringa.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Monitoreo materno fetal
+                                    </p>
+                                    <p>Para el montoreo constante del bebé  </p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/jeringa.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        01 consulta ginecológica
+                                    </p>
+                                    <p>Inmediatamente a la compra del Paquete  </p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/jeringa.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Riesgo Quirúrgico
+                                    </p>
+                                    <p></p>
+                                </div>
+                              </div>
+                                <!-- Elemento  -->
+                              <div class="elemento-grid">
+                                <img src="/images/icons/elementos-iconos/normal/shampoo.svg" alt="" class="elemento-icono" width="8%">
+                                <div class="elemento-text">
+                                    <p class="negrita">
+                                        Kit de aseo
+                                    </p>
+                                    <p> </p>
+                                </div>
+                              </div>
+
+                              
+                              
+                </div>
+
+
+
+                        <div class="precio-parto">
+                            <h5 class="center">El Programa Madre - Bebé</h5>
+                            <p class="center">Parto Cesaréa</p>
+                            <img src="/images/icons/barra.png" alt="" class="barra-img" width="40%">
+                            <img src="/images/icons/elementos-iconos/precio-parto-cesarea.png" alt="">
+                        </div>
+                            
+                        </article>
+                    </div>
+                   
+                </div>
+            </div>
 
 
 
@@ -211,6 +760,9 @@
                 <div class="container flex">
                     <div class="col-2">
                         <p>acordeon</p>
+
+                     
+
                         <!-- Acordeon -->
 
                     </div>
@@ -224,7 +776,7 @@
 
     <!-- Contacto -->
     <section class="contato-section">
-        <div class="container">
+        <div class="container flex">
             <div class="col-2">
                 <h3>Contacto</h3>
                 <img src="/images/icons/barra.png" alt="" class="barra-img">
@@ -271,7 +823,7 @@
 
     </main>
     <footer>
-        <div class="container">
+        <div class="container flex">
             <div class="col-2">
                 Sede
             </div>
@@ -283,29 +835,84 @@
             <div class="col-2">
                 <p>© 2020 - clinicasanjudastadeo.com.pe</p>
             </div>
-            <div class="col-2">
-                Siguenos en nuestras redes
-            </div>
+            
         </div>
     </footer>
     <div class="btn-fixed">
         <a href="#" target=”_blank”>
-            <div class="whatsapp-container">
+            <div class="whatsapp-container latidos " id="button-p">
                 <img src="/images/icons/WhatsApp.svg" alt="" class="ico-whatsapp">
             </div>
         </a>
         <!-- messenger -->
         <a href="https://www.messenger.com/t/sanjudastadeoclinica" target=”_blank”>
-            <div class="whatsapp-container">
-                <img src="/images/icons/WhatsApp.svg" alt="" class="ico-whatsapp">
+            <div class="whatsapp-container" id="button-p">
+                <img src="/images/icons/Messenger.svg" alt="" class="ico-whatsapp">
             </div>
         </a>
-        <div class="button" id="open-modal">
+        <!-- <div class="button" id="open-modal">
             Solicitar cotización
-        </div>
+        </div> -->
+    
     </div>
 
 
+    
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    <!-- Owl -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <!-- Script Personales -->
+    <script src="/scripts/script.js"></script>
+    
+     <script>
+         jQuery(document).ready(function($){
+                $('.loop').owlCarousel({
+                center: true,
+                items: 1,
+                loop:true,
+                margin:10,
+                lazyLoad:true,
+                autoplay:true,
+                autoplayTimeout:6000,
+                autoplayHoverPause:true,
+                nav:false,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:1
+                    },
+                    1000:{
+                        items:1
+                    }
+                }
+            })
+        })
+       
+
+        $('.instalaciones').owlCarousel({
+            items: 1,
+            loop:true,
+            margin:10,
+            center: true,
+            nav:false,
+            dots: true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        })
+     </script>
 
 </body>
 </html>
