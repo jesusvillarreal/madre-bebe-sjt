@@ -52,6 +52,22 @@ html {
     --border-radius: .5rem;
 }
 
+@media(max-width:767px) {
+    :root {
+          /* Tamaños */
+    --header-height: 4rem;
+
+    /* Tamaño de fuentes */
+    --h1-font-size     : 3.625rem;
+    --h2-font-size     : 3.625rem;
+    --h3-font-size     : 2.8rem;
+    --h4-font-size     : 2.25rem;
+    --h5-font-size     : 1.375rem;
+    --normal-font-size : 1.125rem;
+    --small-font-size  : 1rem;
+    --smaller-font-size: 0.6875rem;
+    }
+}
 
 body{
     font-family   : var(--font-family-body);
@@ -170,6 +186,14 @@ p {
 
 ::marker {
     color: #3e87c7;
+}
+
+@media(max-width:768px) {
+    .p-200x{
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
 }
 
 /* Menu */
@@ -324,6 +348,18 @@ p {
     border: 2px solid #2a3b4754;
 }
 
+.video {
+    width: 550px;
+    height: 320px;
+}
+
+@media(max-width:1024px) {
+    .video {
+        width: 450px;
+    }
+}
+
+
 
 /* Equipos */
 .equipos-section, .incluyen-section{
@@ -447,6 +483,9 @@ p {
 footer {
     background-color: var(--primary-color-alt);
     color           : #fff;
+    font-size       : var(--small-font-size);
+    padding-top     : 3em;
+    padding-bottom  : 1em;
 }
 
 
@@ -499,7 +538,7 @@ ul.tabs li {
     color           : #fff;
 }
 
-.pestañas-partos .active:after {
+/* .pestañas-partos .active:after {
     content      : "";
     position     : absolute;
     bottom       : -10px;
@@ -513,7 +552,7 @@ ul.tabs li {
     border-right : 10px solid transparent;
     border-top   : 10px solid #444;
     border-bottom: 0px;
-}
+} */
 
 ul.tabs li a {
     color          : #05315780;
@@ -527,6 +566,10 @@ ul.tabs li a {
     background: #fff;
 }
 
+
+.img-precio {
+    width: 90%;
+}
 
 
 .secciones {
@@ -621,3 +664,134 @@ ul.tabs li a {
     padding-bottom: 0px;
 }
 
+/* ACORDEON  */
+
+.accordion {
+    width    : 90%;
+    max-width: 1000px;
+
+}
+.accordion-item {
+    background-color: #fff;
+    color           : #111;
+    margin          : 1rem 0;
+    border-radius   : var(--border-radius);
+    box-shadow      : 0 1px 8px 0 rgba(0,0,0,0.25);
+
+}
+.accordion-item-header {
+    padding      : 0.5rem 3rem 0.5rem 1rem;
+    min-height   : 3.5rem;
+    line-height  : 1.25rem;
+    display      : flex;
+    align-items  : center;
+    position     : relative;
+    cursor       : pointer;
+    color        : var(--color-body);
+    border-radius: var(--border-radius);
+}
+
+.accordion-item-header i.fas.fa-bars{
+    padding: 0 1rem;
+}
+
+.accordion-item-header:hover {
+    background-color: var(--primary-color);
+    color           : #fff;
+}
+
+.accordion-item-header .active {
+
+    border-top-left-radius : var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.accordion-item-header::after {
+    content  : "\002B";
+    font-size: 2rem;
+    position : absolute;
+    right    : 1rem;
+}
+
+.accordion-item-header.active::after {
+    content: "\2212";
+}
+
+.accordion-item-body {
+    max-height: 0;
+    overflow  : hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+    padding         : 1rem;
+    line-height     : 1.5rem;
+    border-top      : 1px solid;
+    border-image    : linear-gradient(to right, transparent, var(--primary-color), transparent) 1;
+    font-size       : var(--small-font-size);
+    background-color: #f0f4f7;
+    padding-left    : 2em;
+}
+
+@media(max-width:767px) {
+html {
+    font-size: 14px;
+}
+}
+
+
+/* Footer Grid  */
+
+footer h5 {
+    padding-bottom: 20px;
+}
+
+.footer-grid {
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap      : 30px;
+    grid-row-gap         : 20px;
+    grid-template-rows   : auto;
+    align-items          : baseline;
+    justify-content      : center;
+}
+
+.line.footer {
+    width           : auto;
+    height          : 1px;
+    margin-top      : 16px;
+    margin-bottom   : 16px;
+    padding-top     : 0px;
+    padding-bottom  : 0px;
+    background-color: rgba(255, 255, 255, 0.1);
+    grid-column     : 1/4;
+}
+
+footer .flex {
+    display    : flex;
+    align-items: baseline;
+}
+
+i.fas.fa-map-marker-alt, i.far.fa-check-circle, i.fas.fa-phone-alt, i.fab.fa-whatsapp {
+    padding-right: 12px;
+}
+i.far.fa-check-circle {
+    color    : var(--primary-color);
+    font-size: 18px;
+}
+
+.linkSocial {
+    width          : 40px;
+    height         : 40px;
+    border         : 2px solid #FFF;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    border-radius  : 50%;
+    margin-right   : 1rem;
+}
+
+.linkSocial:hover {
+    border          : 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+}
