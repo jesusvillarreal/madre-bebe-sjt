@@ -58,13 +58,13 @@ html {
     --header-height: 4rem;
 
     /* Tamaño de fuentes */
-    --h1-font-size     : 3.625rem;
-    --h2-font-size     : 3.625rem;
-    --h3-font-size     : 2.8rem;
-    --h4-font-size     : 2.25rem;
+    --h1-font-size     : 3.5rem;
+    --h2-font-size     : 3.5rem;
+    --h3-font-size     : 2.3rem;
+    --h4-font-size     : 2rem;
     --h5-font-size     : 1.375rem;
-    --normal-font-size : 1.125rem;
-    --small-font-size  : 1rem;
+    --normal-font-size : 1rem;
+    --small-font-size  : .85rem;
     --smaller-font-size: 0.6875rem;
     }
 }
@@ -190,8 +190,17 @@ p {
 
 @media(max-width:768px) {
     .p-200x{
-        padding-right: 40px;
-        padding-left: 40px;
+        padding-right: 0;
+        padding-left : 0;
+    }
+    
+    .p-100b {
+        padding-bottom: 50px;
+    }
+
+    .p-100 {
+        padding-bottom: 50px;
+        padding-top   : 50px;
     }
 
 }
@@ -222,6 +231,21 @@ p {
     margin-top: 2px;
 }
 
+@media screen and (max-width: 700px) {
+    .cabecera-item {
+        max-width: 50%;
+    }
+
+    .slider-img {
+        display: none;
+    }
+
+    .slider .col-2 {
+        width    : 100%;
+        max-width: 100%;
+    }
+}
+
 /* Slider */
 
 .slider {
@@ -244,12 +268,12 @@ p {
 .slider h1:after, .slider h2:after {
     content         : "";
     background-color: rgb(224, 0, 49);
-    width           : 395px;
+    width           : auto;
     height          : 5px;
     min-height      : 0px;
     min-width       : 0px;
     max-height      : none;
-    max-width       : none;
+    max-width       : 395px;
     transform-origin: 50% 50%;
     opacity         : 1;
     transform       : translate(0px, 0px);
@@ -315,6 +339,7 @@ p {
     position     : relative;
     background   : #fff;
     z-index      : var(--z-normal);
+    flex-wrap    : nowrap;
 }
 
 .container.tira-item {
@@ -334,10 +359,22 @@ p {
     padding-left: 12px;
 }
 
+@media screen and (max-width: 700px) {
+    .tira-detalles-section {
+    flex-wrap    : wrap;
+    margin-bottom: 80px;
+    }
+
+    .container.tira-item {
+        width: 50%;
+    }
+}
+
 /* porque */
 .porque-container{
     display    : flex;
     align-items: flex-end;
+    flex-wrap  : nowrap;
 }
 
 .video-responsive {
@@ -349,13 +386,43 @@ p {
 }
 
 .video {
-    width: 550px;
+    width : 550px;
     height: 320px;
 }
 
-@media(max-width:1024px) {
+
+
+
+/* @media(min-width:1024px) {
     .video {
         width: 450px;
+    }
+ 
+} */
+
+@media(max-width:425px) {
+    .video {
+        width : 330px;
+        height: 230px;
+    }
+
+    .col-2.video-responsive {
+        display        : flex;
+        justify-content: center;
+    }
+
+    .div-txt {
+        padding-right: 12px;
+    }
+
+    .container.porque-container {
+        flex-wrap: wrap;
+        display  : block;
+    }
+    .porque-section .col-2 {
+        width    : 100%;
+        max-width: 100%;
+        
     }
 }
 
@@ -369,6 +436,7 @@ p {
     display        : flex;
     align-items    : center;
     justify-content: space-around;
+    flex-wrap      : nowrap;
 }
 
 .equipos-section .barra-img, .staff-section .barra-img, .recomendaciones-section .barra-img {
@@ -398,11 +466,32 @@ p {
     margin: auto;
 }
 
+@media(max-width:425px) {
+    .contenido-equipos {
+        flex-wrap: wrap;
+    }
+
+    .col-2.contenido-equipos-txt {
+        width    : 100%;
+        max-width: 100%;
+        padding  : 20px;
+    }
+
+    .subtitle {
+        padding-bottom: 12px;
+    }
+
+    .col-2.carrousel-equipos {
+        width    : 100%;
+        max-width: 100%;
+    }
+}
 /* Staff  */
 
 .staff-contenido {
     display    : flex;
     align-items: center;
+    flex-wrap  : nowrap;
 }
 
 .staff-contenido ul{
@@ -410,11 +499,40 @@ p {
     margin-bottom: 1rem;
 }
 
+
+@media(max-width:425px) {
+    
+    .staff-contenido {
+        flex-wrap: wrap;
+    }
+
+    .staff-section .col-2 {
+        display        : flex;
+        width          : 100%;
+        max-width      : 100%;
+        justify-content: center;
+        flex-wrap      : wrap;
+    }
+
+    .staff-section ul {
+        margin-right: auto;
+    }
+
+    .staff-section .txt {
+        padding-top: 18px;
+    }
+
+}
+
 /* Curso de Psicoprofilaxis */
 .barra-section {
     background-image: url("../images/fondo-tira.jpg");
     padding-top     : 40px;
     padding-bottom  : 10px;
+}
+
+.barra-section .flex {
+    flex-wrap: nowrap
 }
 
 .psico-img {
@@ -427,6 +545,47 @@ p {
     color: #fff;
 }
 
+@media(max-width:425px) {
+    .barra-section .col-2 {
+        width    : 100%;
+        max-width: 100%;
+    }
+
+    .psico-img {
+        display: inherit;
+        width  : 80%;
+        margin : auto;
+    }
+
+    .barra-section .flex {
+        flex-wrap: wrap
+    }
+}
+
+/* Recomendaciones de gestantes  */
+
+.recomendaciones-section .flex {
+    flex-wrap: nowrap;
+}
+
+.recomendaciones-section .flex {
+    flex-wrap: wrap;
+}
+
+.recomendaciones-section .col-2 {
+    width    : 100%;
+    max-width: 100%;
+}
+
+.recomendaciones-section .accordion {
+    margin: auto;
+}
+
+.recomendaciones-section .recomendacionesImg {
+    width  : 88%;
+    margin : auto;
+    display: inherit;
+}
 
 /* Botones flotantes */
 
