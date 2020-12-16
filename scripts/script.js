@@ -15,6 +15,7 @@ $(document).ready(function(){
 
 })
 
+// modal 
 
 const buttonOpen = document.getElementById('open-modal')
 const buttonClose = document.getElementById('close-modal')

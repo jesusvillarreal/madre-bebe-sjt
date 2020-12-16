@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="/styles/form.css">
     <link rel="stylesheet" href="/styles/botones.css">
 
+    <!-- estilos de pagina gracias -->
+    <link rel="stylesheet" href="/gracias/gracias.css">
+
     <!-- OWL Carrousel -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
 
@@ -37,7 +40,7 @@
                 <a href="#">
                     <img src="/images/Logo-a-colores-SJT.png" alt="Logo San Judas Tadeo"  class="cabecera-item">
                 </a>
-                <button class="cabecera-item button" id="open-modal">Solicitar Información</button>
+                <!-- <button class="cabecera-item button" id="open-modal">Solicitar Información</button>     -->
             </div>
 
         </nav>
@@ -46,76 +49,17 @@
 
     <main>
         <!-- Modal de formulario -->
-        <div class="modal " id="modal">
+        <div class="modal active" id="modal">
             <div class="content">
                 <div class="container-form " >
-                    <label for="show" class="close-btn fas fa-times" id="close-modal" ></label>
+                    <!-- <label for="show" class="close-btn fas fa-times" id="close-modal" ></label> -->
                     
                     <!-- Formuarlio -->
-                    <h4>Solicitar información</h4>
-                    <p class="subtitulo-formulario">Planifica la llegada de tu bebé a través de cómodos pagos hasta el momento de dar a luz.</p>
-                    <form action="#">
-                        <div class="data">
-                            <label class="modal-label " for="">Su nombre</label>
-                            <input 
-                            class="input-formulario" 
-                            placeholder="Incluye tu nombre y apellidos"
-                            type="text" 
-                            value="" 
-                            name="nom_paci"
-                            id="nom_paci"
-                            minlength="6"
-                            minlength="6"
-                            required>
-                        </div>
-                     
-                        <div class="data">
-                            <label class="modal-label" for="">Meses de Gestación</label>
-                            <select name="mes_gestacion" class="select-place" required>
-                                <option disable selected>¿Cuántos meses tienes?</option>
-                                <option value="Mes 1" class="option-mes">1 Mes</option>
-                                <option value="Mes 2" class="option-mes">2 Meses</option>
-                                <option value="Mes 3" class="option-mes">3 Meses</option>
-                                <option value="Mes 4" class="option-mes">4 Meses</option>
-                                <option value="Mes 5" class="option-mes">5 Meses</option>
-                                <option value="Mes 6" class="option-mes">6 Meses</option>
-                                <option value="Mes 7" class="option-mes">7 Meses</option>
-                                <option value="Mes 8" class="option-mes">8 Meses</option>
-                                <option value="Mes 9" class="option-mes">9 Meses</option>
-                            </select>
-                        </div>
+                    <img src="/images/Logo-a-colores-SJT.png" alt="Logo San Judas Tadeo"  class="cabecera-item">
+                    <h4 class="tit-form">Gracias por inscribirte</h4>
+                    <p class="subtitulo-formulario">A la brevedad posible, una asesora se comunicara con usted y para poder brindarle mayor información.</p>
 
-                        <div class="data">
-                            <label class="modal-label" for="">Celular o WhatsApp</label>
-                            <input 
-                            class="input-formulario" 
-                            placeholder="Ingresa tu número de celular"
-                            type="number" 
-                            value=""
-                            name="num_tele"
-                            
-                            maxlength="11"
-                            required>
-                        </div>
-                   
-                        <div class="data">
-                            <label class="modal-label" for="">Tu correo electrónico</label>
-                            <input 
-                            class="input-formulario" 
-                            placeholder="Ingresa tu correo electronico"
-                            type="email" 
-                            value="" 
-                            name="des_mail" 
-                            id="des_mail" 
-                            required>
-                        </div>
-
-                        <!-- <div class="terms">
-                            <input type="checkbox" name="terms" onclick="disableSending()">
-                            <label for="terms">Acepto recibir información de promociones.</label>
-                        </div> -->
-                        <button type="submit" class="formulario-submit button dark" value="Enviar" >Enviar datos</button>
-                    </form>
+                    <button type="submit" class="formulario-submit button dark" id="close-modal">Entendido</button>
                 </div>
             </div>
         </div>

@@ -1,0 +1,13 @@
+/* .modal .button {
+    width: auto;
+} */
+
+.modal .tit-form {
+    font-size : 2rem;
+    padding   : 20px 0 8px;
+    text-align: center;
+}
+
+.modal img.cabecera-item {
+    width: 32%;
+}

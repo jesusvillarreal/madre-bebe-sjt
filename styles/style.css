@@ -526,9 +526,11 @@ p {
 
 /* Curso de Psicoprofilaxis */
 .barra-section {
-    background-image: url("../images/fondo-tira.jpg");
-    padding-top     : 40px;
-    padding-bottom  : 10px;
+    background-image : url(../images/fondo-tira.jpg);
+    background-repeat: no-repeat;
+    background-size  : cover;
+    padding-top      : 40px;
+    padding-bottom   : 10px;
 }
 
 .barra-section .flex {
@@ -567,24 +569,25 @@ p {
 .recomendaciones-section .flex {
     flex-wrap: nowrap;
 }
+@media(max-width:425px) {
+    .recomendaciones-section .flex {
+        flex-wrap: wrap;
+    }
 
-.recomendaciones-section .flex {
-    flex-wrap: wrap;
-}
+    .recomendaciones-section .col-2 {
+        width    : 100%;
+        max-width: 100%;
+    }
 
-.recomendaciones-section .col-2 {
-    width    : 100%;
-    max-width: 100%;
-}
+    .recomendaciones-section .accordion {
+        margin: auto;
+    }
 
-.recomendaciones-section .accordion {
-    margin: auto;
-}
-
-.recomendaciones-section .recomendacionesImg {
-    width  : 88%;
-    margin : auto;
-    display: inherit;
+    .recomendaciones-section .recomendacionesImg {
+        width  : 88%;
+        margin : auto;
+        display: inherit;
+    }
 }
 
 /* Botones flotantes */
@@ -754,6 +757,7 @@ ul.tabs li a {
 @media screen and (max-width: 450px){
     ul.tabs li a{
         padding: 15px 0;
+
     }
 
     ul.tabs li a .tab-text {
@@ -893,9 +897,37 @@ ul.tabs li a {
 }
 
 @media(max-width:767px) {
-html {
-    font-size: 14px;
+    html {
+        font-size: 14px;
+    }
 }
+
+@media(max-width:425px) {
+    .grid {
+        width: 100%;
+        display: block;
+    }
+
+    .elemento-grid {
+        padding: .5em 0;
+    }
+
+    .elemento-grid.centrar {
+        width: 100%;
+    }
+    
+    .precio-parto {
+        width  : 100%;
+        padding: 20px 0;
+    }
+
+    p.negrita {
+        font-weight: 800;
+    }
+
+    .accordion {
+        width: 100%;
+    }
 }
 
 
@@ -953,4 +985,26 @@ i.far.fa-check-circle {
 .linkSocial:hover {
     border          : 2px solid var(--primary-color);
     background-color: var(--primary-color);
+}
+
+
+@media(max-width:425px) {
+    .copy {
+        width    : 100%;
+        max-width: 100%;
+        font-size: .85rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        padding              : 0 20px;
+    }
+
+    .line.footer {
+        grid-column: auto;
+    }
+
+    footer {
+        font-size: .9rem;
+    }
 }

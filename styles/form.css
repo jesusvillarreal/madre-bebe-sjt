@@ -131,3 +131,25 @@ input::placeholder {
 .container-form .close-btn:hover {
     color: var(--primary-color);
 } 
+
+select {
+    border : 0;
+    outline: 0;
+}
+
+.select-place {
+    color    : #b8b6c5;
+    font-size: 12px;
+}
+
+.option-mes {
+    color    : var(--color-body);
+    font-size: 16px;
+}
+
+
+@media(max-width:425px) {
+    .container-form {
+        padding: 24px 12px 11px;
+    }
+}
