@@ -152,4 +152,8 @@ select {
     .container-form {
         padding: 24px 12px 11px;
     }
+
+    p.subtitulo-formulario {
+        text-align: center;
+    }
 }

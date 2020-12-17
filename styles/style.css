@@ -327,6 +327,32 @@ p {
 }
 
 
+    /* Flechas  */
+
+    .owl-prev, .owl-next {
+        position   : absolute;
+        top        : 50%;
+        transform  : translate(-50%);
+        color      : #fff!important;
+        font-size  : 60px!important;
+        font-weight: bolder;
+        background : none!important;
+        outline    : 0;
+    }
+    .owl-prev {
+        left: 1%;
+    }
+
+    .owl-next {
+        right: 1%;
+    }
+
+    @media screen and (max-width: 425px) {
+        .owl-prev, .owl-next {
+            display: none;
+        }
+    }
+
 /* Tira de caracteristicas */
 
 .tira-detalles-section {
@@ -696,8 +722,8 @@ ul.tabs li {
 
 
 .pestañas-partos .active {
-    background-color: var(--primary-color-alt);
-    color           : #fff;
+    color        : var(--primary-color-alt);
+    border-bottom: 4px solid var(--primary-color-alt);
 }
 
 /* .pestañas-partos .active:after {
@@ -725,7 +751,8 @@ ul.tabs li a {
     display        : block;
     padding        : 20px 0;
     /* border         : 2px solid var(--primary-color-alt); */
-    background: #fff;
+    background   : #fff;
+    border-bottom: 4px solid #fff;
 }
 
 
@@ -904,7 +931,7 @@ ul.tabs li a {
 
 @media(max-width:425px) {
     .grid {
-        width: 100%;
+        width  : 100%;
         display: block;
     }
 
